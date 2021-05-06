@@ -20,6 +20,7 @@
       <h3>{{ error_text }}</h3>
       <input type="text"
         v-model="input_text"
+        @keyup.enter="addEvent(input_text)"
       >
       <button @click="addEvent(input_text)">Add</button>
     </div>
@@ -30,9 +31,10 @@
         :class="{checked: toDo.isChecked}"
         @click="toDo.isChecked = !toDo.isChecked"      
       >
-        {{toDo.text}}
+      <span>{{toDo.text}}</span>
 
         <i class="fas fa-times"
+          v-if="toDo.isChecked"          
           @click.stop="deleteEvent(toDo)"
         ></i>
       </li>

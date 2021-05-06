@@ -70,7 +70,9 @@ body {
 
 .to-do-list li.checked {
   color: lightgrey;
-  text-decoration: line-through;
+}
+.to-do-list li.checked span {
+  text-decoration: line-through;  
 }
 
 .to-do-list li:last-child {
@@ -79,9 +81,11 @@ body {
 
 .to-do-list i {
   color: lightgrey;
+  text-decoration: none;
   cursor: pointer;
 }
 
 .to-do-list i:hover {
+  text-decoration: none;
   color: brown;
 }

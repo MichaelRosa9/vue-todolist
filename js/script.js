@@ -4,8 +4,8 @@
 - ogni elemento ha due stati (checked o non checked)                --check
 - al click dell’elemento avviene il toggle dello status             --check
 - al click sulla croce si elimina l’elemento                        --check
-- clickando sul bottone si aggiunge il contenuto dell’input text solo se è più lungo di 2 caratteri
-- se è più corto appare un alert che scompare dopo 2 secondi
+- clickando sul bottone si aggiunge il contenuto dell’input text solo se è più lungo di 2 caratteri                                                         --check
+- se è più corto appare un alert che scompare dopo 2 secondi        --check
 
 bonus: rendere possibile l’eliminazione dell’item solo se prima è stato checkato
  */
@@ -50,7 +50,6 @@ var app = new Vue({
         this.error_text ="Error";
         setTimeout(()=>{
           this.error_text ="";
-
         }, 2000);
       }
       this.input_text ='';
