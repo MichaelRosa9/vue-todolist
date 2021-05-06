@@ -22,13 +22,16 @@
     </div>
 
     <ul class="to-do-list">
-      <li>
-        ciao
-        <i class="fas fa-times"></i>
-      </li>
-      <li>
-        hola
-        <i class="fas fa-times"></i>
+      <li
+        v-for="toDo in toDoList"  
+        :class="{checked: toDo.isChecked}"
+        @click="toDo.isChecked = !toDo.isChecked"      
+      >
+        {{toDo.text}}
+
+        <i class="fas fa-times"
+          @click.stop="deleteEvent(toDo)"
+        ></i>
       </li>
     </ul>
     <div class="wrapper">
