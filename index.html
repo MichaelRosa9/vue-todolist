@@ -17,8 +17,11 @@
     </div>
 
     <div class="to-do-input">
-      <input type="text">
-      <button>Add</button>
+      <h3>{{ error_text }}</h3>
+      <input type="text"
+        v-model="input_text"
+      >
+      <button @click="addEvent(input_text)">Add</button>
     </div>
 
     <ul class="to-do-list">
